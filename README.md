@@ -142,16 +142,35 @@ If you could master one technology this year, what would it be?
 #### JS Questions:
 
 * Explain event delegation
+  Event delegation allows us to attach a single event listener, to a parent element, that will fire for all descendants matching a selector, whether those descendants exist now or are added in the future.
 * Explain how `this` works in JavaScript
+  this is really just a shortcut reference for the “antecedent object”—the invoking object
 * Explain how prototypal inheritance works
+  JavaScript objects are dynamic "bags" of properties (referred to as own properties). JavaScript objects have a link to a prototype object. When trying to access a property of an object, the property will not only be sought on the object but on the prototype of the object, the prototype of the prototype, and so on until either a property with a matching name is found or the end of the prototype chain is reached.
 * What do you think of AMD vs CommonJS?
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
   * What needs to be changed to properly make it an IIFE?
+    Needs to be wrapped in parenthesis
 * What's the difference between a variable that is: `null`, `undefined` or undeclared?
+  undefined is a variable that has been declared but no value exists and is a type of itself ‘undefined’.
+  null is a value of a variable and is a type of object.
+  undeclared variables is a variable that has been declared 
   * How would you go about checking for any of these states?
+    use `console.log();` and `type of` 
 * What is a closure, and how/why would you use one?
+  closure is the combination of a function and the lexical environment within which that function was declared. This environment consists of any local variables that were in-scope at the time the closure was created. 
+  Allows you to maintain a reference to lexical environment
+  Much of the code we write in front-end JavaScript is event-based — we define some behavior, then attach it to an event that is triggered by the user (such as a click or a keypress). Our code is generally attached as a callback: a single function which is executed in response to the event
+
 * Can you describe the main difference between a `forEach` loop and a `.map()` loop and why you would pick one versus the other?
+  forEach iterates over a list and applies some operation with side effects to each list member (such as saving each one to the database for example)
+  map iterates over a list, transforms each member of that list, and returns another list of the same size with the transformed members (such as converting a list of strings to uppercase)
+
 * What's a typical use case for anonymous functions?
+  function that was declared without any named identifier to refer to it
+  pass them as arguments to other functions, ex setTimeout or map
+  https://www.quora.com/Whats-a-typical-use-case-for-anonymous-functions-in-JavaScript
+
 * How do you organize your code? (module pattern, classical inheritance?)
 * What's the difference between host objects and native objects?
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
@@ -176,7 +195,15 @@ If you could master one technology this year, what would it be?
 duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 ```
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
+  Used as a shortcut for the if statement
+  Takes three arguments
+
 * What is `"use strict";`? what are the advantages and disadvantages to using it?
+  Strict Mode is a new feature in ECMAScript 5 that allows you to place a program, or a function, in a "strict" operating context. This strict context prevents certain actions from being taken and throws more exceptions.
+  It catches some common coding bloopers, throwing exceptions.
+  It prevents, or throws errors, when relatively "unsafe" actions are taken (such as gaining access to the global object).
+  It disables features that are confusing or poorly thought out.
+
 * Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, **"buzz"** at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
 * Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
 * Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
