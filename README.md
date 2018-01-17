@@ -65,8 +65,14 @@ If you could master one technology this year, what would it be?
 #### HTML Questions:
 
 * What does a `doctype` do?
+  Instruction to the web browser about what version of HTML the page is written in
 * What's the difference between full standards mode, almost standards mode and quirks mode?
+  Quirks: layout emulates nonstandard behavior in Navigator 4 and Internet Explorer 5. This is essential in order to support websites that were built before the widespread adoption of web standards
+  Full standards: behavior is (hopefully) the behavior described by the HTML and CSS specifications
+  Almost standards:  there are only a very small number of quirks implemented
+
 * What's the difference between HTML and XHTML?
+  markup language where documents must be marked up correctly (be "well-formed")
 * Are there any problems with serving pages as `application/xhtml+xml`?
 * How do you serve a page with content in multiple languages?
 * What kind of things must you be wary of when design or developing for multilingual sites?
@@ -82,7 +88,9 @@ If you could master one technology this year, what would it be?
 #### CSS Questions:
 
 * What is the difference between classes and IDs in CSS?
+
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+
 * Describe Floats and how they work.
 * Describe z-index and how stacking context is formed.
 * Describe BFC(Block Formatting Context) and how it works.
