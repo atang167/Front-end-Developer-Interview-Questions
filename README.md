@@ -88,14 +88,30 @@ If you could master one technology this year, what would it be?
 #### CSS Questions:
 
 * What is the difference between classes and IDs in CSS?
+  Classes should be used for similar elements, useful if more than one element is likely to have the same style
+  IDs are unique and are used to style specific element
 
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+  Reset.css will remove all the default styling applied by the browser to give you a blank canvas where as normalize is a base stylesheet meaning its the starting point for your website styles and it styles the default elements to be consistent across the browsers
+  Depends on the situation - probably use normalize to make sure that my page is compatible with browsers
 
 * Describe Floats and how they work.
+  Specifies that an element should be placed along the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the web page, though still remaining a part of the flow 
+
 * Describe z-index and how stacking context is formed.
+  Specifies the stack order of an element.
+  An element with greater stack order is always in front of an element with a lower stack order
+
 * Describe BFC(Block Formatting Context) and how it works.
+  The region in which the layout of block boxes occurs and in which floats interact with each other. A block formatting context is created by one of the following: the root element or something that contains it
+
 * What are the various clearing techniques and which is appropriate for what context?
+  The Empty Div Method is, quite literally, an empty div. <div style="clear: both;"></div> . ...
+  The Overflow Method relies on setting the overflow CSS property on a parent element. ...
+  The Easy Clearing Method uses a clever CSS pseudo selector (:after) to clear floats.
+
 * Explain CSS sprites, and how you would implement them on a page or site.
+  You set the same background-image on several CSS classes and set the background position and dimensions of the individual classes to display a single portion of the sprite. 
 * What are your favourite image replacement techniques and which do you use when?
 * How would you approach fixing browser-specific styling issues?
 * How do you serve your pages for feature-constrained browsers?
